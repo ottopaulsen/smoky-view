@@ -1,3 +1,7 @@
 <h1>
   {{title}}
 </h1>
+
+<h2>Temperatur inne: {{(smoky | async)?.inside.temperature}}</h2>
+<h2>Luftfuktighet inne: {{(smoky | async)?.inside.humidity}}</h2>
+<h2>Røyknivå:    {{(smoky | async)?.inside.smoke}}</h2>

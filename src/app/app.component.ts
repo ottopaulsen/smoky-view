@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Otto, app works!';
+  smoky: FirebaseObjectObservable<any>;
+  constructor(af: AngularFire) {
+      this.smoky = af.database.object('/latest/smoky/1');
+  }  
 }

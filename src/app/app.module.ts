@@ -4,6 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AngularFireModule } from 'angularfire2';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyDsmLLbMsyoRLbTVmi31MM_yjxlvKVfmtc",
+    authDomain: "smoky-c9f1b.firebaseapp.com",
+    databaseURL: "https://smoky-c9f1b.firebaseio.com/",
+    storageBucket: "smoky-c9f1b.appspot.com"
+};
 
 @NgModule({
   declarations: [
@@ -12,7 +20,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
