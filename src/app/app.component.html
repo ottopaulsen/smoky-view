@@ -2,6 +2,8 @@
   {{title}}
 </h1>
 
-<h2>Temperatur inne: {{(smoky | async)?.inside.temperature}}</h2>
-<h2>Luftfuktighet inne: {{(smoky | async)?.inside.humidity}}</h2>
-<h2>Røyknivå:    {{(smoky | async)?.inside.smoke}}</h2>
+<ul class="readings">
+  <div *ngFor="let reading of readings">
+    <h2>{{reading.title}}: {{(reading.value | async)?.$value}}</h2>
+  </div>
+</ul>
