@@ -1,0 +1,22 @@
+.label {
+    font-size: 20px;
+    width: 200px;
+    text-align: right;
+}
+
+.value {
+    font-size: 40px;
+    width: 100px;
+    text-align: right;
+    color: #ddd;
+}
+
+.unit {
+    font-size: 20px;
+    width: 80px;
+    padding-left: 30px;
+}
+
+td{
+  vertical-align: middle;
+}

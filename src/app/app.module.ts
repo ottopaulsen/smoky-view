@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
+import { ReadingComponent } from './reading.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDsmLLbMsyoRLbTVmi31MM_yjxlvKVfmtc",
@@ -15,7 +16,8 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReadingComponent
   ],
   imports: [
     BrowserModule,

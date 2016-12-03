@@ -1,9 +1,14 @@
-<h1>
+<h1 class="title">
   {{title}}
 </h1>
 
-<ul class="readings">
-  <div *ngFor="let reading of readings">
-    <h2>{{reading.title}}: {{(reading.value | async)?.$value}}</h2>
-  </div>
-</ul>
+
+<table>
+    <tbody>
+        <tr *ngFor="let rowData of readings">
+        <readingRow [readingData]="rowData">Reading data here</readingRow>
+        </tr>
+    </tbody>
+</table>
+
+
