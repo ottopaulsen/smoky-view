@@ -14,7 +14,7 @@ export class Reading {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Smoky!';
+  title = 'Smoky';
   smoky: FirebaseObjectObservable<any>;
   weather: FirebaseObjectObservable<any>;
   readings: Reading[];

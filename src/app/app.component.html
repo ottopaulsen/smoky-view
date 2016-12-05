@@ -1,14 +1,12 @@
-<h1 class="title">
-  {{title}}
-</h1>
-
-
-<table>
-    <tbody>
-        <tr *ngFor="let rowData of readings">
-        <readingRow [readingData]="rowData">Reading data here</readingRow>
-        </tr>
-    </tbody>
+<table class="title">
+    <tbody><tr><td>
+        <table>
+            <tbody>
+                <tr><td class="smoky-title">{{title}}</td></tr>
+                <tr *ngFor="let rowData of readings">
+                    <readingRow [readingData]="rowData">Reading data here</readingRow>
+                </tr>
+            </tbody>
+        </table>
+    </td></tr></tbody>
 </table>
-
-

@@ -1,19 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+#page-wrap {
+     width: 400px;
+     margin: 0 auto;
+}
+
 body {
     background-color: #222;
     font-family: verdana;
     color: #bbb;
 }
-
-h1 {
-    text-align: left;
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
-}
-
 
 

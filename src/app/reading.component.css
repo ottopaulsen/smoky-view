@@ -1,20 +1,22 @@
-.label {
+
+
+.smoky-label {
     font-size: 20px;
     width: 200px;
     text-align: right;
 }
 
-.value {
+.smoky-value {
     font-size: 40px;
     width: 100px;
     text-align: right;
-    color: #ddd;
+    color: yellow;
 }
 
-.unit {
-    font-size: 20px;
-    width: 80px;
-    padding-left: 30px;
+.smoky-unit {
+    font-size: 30px;
+    width: 60px;
+    padding-left: 15px;
 }
 
 td{
