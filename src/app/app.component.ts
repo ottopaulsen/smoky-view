@@ -34,7 +34,7 @@ export class AppComponent {
           { title: 'Temperatur ute', value: af.database.object('/latest/weather/outTemp_C'), unit: '°C' },
           { title: 'Luftfuktighet inne', value: af.database.object('/latest/smoky/1/inside/humidity'), unit: '%' },
           { title: 'Røyknivå', value: af.database.object('/latest/smoky/1/inside/smoke'), unit: '' },
-          { title: 'Artigfaktor', value: af.database.object('/latest/artigfaktor/1'), unit: 'gøy' }
+          { title: 'Ballmer peak detector', value: af.database.object('/latest/ballmerpeakdetector/bac'), unit: 'bac' }
       ];
   }  
 }
