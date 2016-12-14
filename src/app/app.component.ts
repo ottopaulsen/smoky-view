@@ -35,7 +35,7 @@ export class AppComponent {
           { title: 'Luftfuktighet inne', value: af.database.object('/latest/smoky/1/inside/humidity'), unit: '%' },
           { title: 'Røyknivå', value: af.database.object('/latest/smoky/1/inside/smoke'), unit: '' },
           { title: 'Bamsebu lufttrykk', value: af.database.object('/latest/bamsebu/1/inside/pressure'), unit: 'hPa' },
-          { title: 'Ballmer peak detector', value: af.database.object('/latest/ballmerpeakdetector/bac'), unit: 'bac' }
+          { title: 'Ballmer peak detector', value: af.database.object('/latest/ballmerpeakdetector/bac'), unit: '' }
       ];
   }  
 }
