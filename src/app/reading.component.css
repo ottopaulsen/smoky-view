@@ -2,26 +2,26 @@
 
 .smoky-label {
     font-size: 20px;
-    font-size: 8vh;
+    font-size: 4vmin;
     width: 300px;
-    width: 40vw;
+    width: 30vw;
     text-align: right;
 }
 
 .smoky-value {
     font-size: 40px;
-    font-size: 15vh;
+    font-size: 8vmin;
     width: 200px;
-    width: 30vw;
+    width: 22vw;
     text-align: right;
     color: yellow;
 }
 
 .smoky-unit {
     font-size: 30px;
-    font-size: 12vh;
+    font-size: 5vmin;
     width: 60px;
-    width: 20vw;
+    width: 8vw;
     _padding-left: 15px;
 }
 
