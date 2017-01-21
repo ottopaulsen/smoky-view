@@ -5,6 +5,7 @@ export class Reading {
   title: string;
   value: FirebaseObjectObservable<any>;
   unit: string;
+  format: string;
 }
 
 
@@ -23,10 +24,10 @@ export class AppComponent {
       this.weather = af.database.object('/latest/weather');
 
       this.readings = [
-          { title: 'Temperatur inne', value: af.database.object('/latest/smoky/1/inside/temperature'), unit: '°C' },
-          { title: 'Temperatur ute', value: af.database.object('/latest/weather/outTemp_C'), unit: '°C' },
-          { title: 'Luftfuktighet inne', value: af.database.object('/latest/smoky/1/inside/humidity'), unit: '%' },
-          { title: 'Røyknivå', value: af.database.object('/latest/smoky/1/inside/smoke'), unit: '' }
+          { title: 'Temperatur inne', value: af.database.object('/latest/smoky/1/inside/temperature'), unit: '°C', format: '1.1-1'  },
+          { title: 'Temperatur ute', value: af.database.object('/latest/weather/outTemp_C'), unit: '°C', format: '1.1-1' },
+          { title: 'Luftfuktighet inne', value: af.database.object('/latest/smoky/1/inside/humidity'), unit: '%', format: '1.0-0'  },
+          { title: 'Røyknivå', value: af.database.object('/latest/smoky/1/inside/smoke'), unit: '', format: '1.0-0'  }
       ];
   }  
 }

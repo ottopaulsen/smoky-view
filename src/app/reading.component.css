@@ -4,15 +4,15 @@
     font-size: 20px;
     font-size: 4vmin;
     width: 300px;
-    width: 30vw;
+    width: 40vw;
     text-align: right;
 }
 
 .smoky-value {
     font-size: 40px;
     font-size: 8vmin;
-    width: 200px;
-    width: 22vw;
+    width: 100px;
+    width: 20vw;
     text-align: right;
     color: yellow;
 }
@@ -21,8 +21,9 @@
     font-size: 30px;
     font-size: 5vmin;
     width: 60px;
-    width: 8vw;
-    _padding-left: 15px;
+    width: 40vw;
+    text-align: left;
+    padding-left: 15px;
 }
 
 td{
