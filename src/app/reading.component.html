@@ -4,7 +4,7 @@
     {{readingData.title}}:
 </td>
 <td class="smoky-value">
-    {{(readingData.value | async)?.$value | number : readingData.format}}
+    {{readingData.value | async | number : readingData.format}}
 </td>
 <td class="smoky-unit">
     {{readingData.unit}}

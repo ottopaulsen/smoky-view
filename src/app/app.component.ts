@@ -1,9 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
 
 export class Reading {
   title: string;
-  value: FirebaseObjectObservable<any>;
+  value: Observable<any>;
   unit: string;
   format: string;
 }
@@ -14,24 +18,17 @@ export class Reading {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'Smoky';
-  smoky: FirebaseObjectObservable<any>;
-  weather: FirebaseObjectObservable<any>;
   readings: Reading[];
-  constructor(af: AngularFire) {
-      this.smoky = af.database.object('/latest/smoky/1');
-      this.weather = af.database.object('/latest/weather');
-
+  user: Observable<firebase.User>;
+  constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
       this.readings = [
-          { title: 'Temperatur inne', value: af.database.object('/latest/smoky/1/inside/temperature'), unit: '°C', format: '1.1-1'  },
-          { title: 'Temperatur ute', value: af.database.object('/latest/weather/outTemp_C'), unit: '°C', format: '1.1-1' },
-          { title: 'Luftfuktighet inne', value: af.database.object('/latest/smoky/1/inside/humidity'), unit: '%', format: '1.0-0'  },
-          { title: 'Røyknivå', value: af.database.object('/latest/smoky/1/inside/smoke'), unit: '', format: '1.0-0'  }
-      ];
-  }  
+          { title: 'Temperatur inne', value: af.object('/latest/smoky/1/inside/temperature').valueChanges(), unit: '°C', format: '1.1-1'  },
+          { title: 'Temperatur ute', value: af.object('/latest/weather/outTemp_C').valueChanges(), unit: '°C', format: '1.1-1' },
+          { title: 'Luftfuktighet inne', value: af.object('/latest/smoky/1/inside/humidity').valueChanges(), unit: '%', format: '1.0-0'  },
+          { title: 'Røyknivå', value: af.object('/latest/smoky/1/inside/smoke').valueChanges(), unit: '', format: '1.0-0'  }
+        ];
+  }
 }
-
-
-
-
