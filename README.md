@@ -11,7 +11,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 ### Installation
 
 ```
-sudo npm install -g angular-cli
+npm install -g @angular/cli
 git clone git@github.com:ottopaulsen/smoky-view.git
 npm install
 ```
